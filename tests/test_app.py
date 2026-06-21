@@ -6,9 +6,8 @@ from app import app
 
 
 def test_read_root():
-    client = TestClient(app)  # arrange
-
-    response = client.get('/')  # act
+    with TestClient(app) as client:  # arrange
+        response = client.get('/')  # act
 
     assert response.status_code == HTTPStatus.OK  # assert
     assert response.json() == {'message': 'Hello, World!'}  # assert

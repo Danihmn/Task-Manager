@@ -12,3 +12,6 @@ wheels/
 # Test coverage
 .coverage
 htmlcov/
+
+# Claude Code
+.claude/
