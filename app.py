@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+from root import router as root_router
+
+app = FastAPI(title='Task Manager API', version='1.0.0')
 
 
-@app.get('/')
-def read_root():
-    return {'message': 'Hello, World!'}
+app.include_router(root_router)
