@@ -25,6 +25,6 @@ preview = true
 quote-style = 'single'
 
 [tool.taskipy.tasks]
-run = 'fastapi run .\app.py '
+run = 'fastapi dev .\app.py '
 test = 'pytest --cov=. -vv'
 post_test = 'coverage html'
